@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Cadastro</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="campo">
+        <h1 id="titulo">Cadastro:</h1>
+        <p id="subtitulo">Insira seus dados e confira antes de enviar.</p>
+    </div>
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome:</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome:</strong></label> 
+                <input type="text" id="sobrenome" name="sobrenome" required>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="email"><strong>E-mail:</strong></label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="campo">
+            <label for="gen"><strong>Gênero:</strong></label>
+            <label><input type="radio" name="gen" value="fem" checked>Feminino</label>
+            <label><input type="radio" name="gen" value="masc">Masculino</label>
+            <label><input type="radio" name="gen" value="nb">Não-binário</label>
+        </div>
+        <div class="campo">
+            <label for="ano"><strong>Ano escolar:</strong></label>
+            <select id="ano" name="ano">
+                <option selected disabled value:"">Selecione</option>
+                <option>Primeiro ano</option>
+                <option>Segundo ano</option>
+                <option>Terceiro ano</option>
+            </select>
+        </div>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label><strong>Selecione seus interesses:</strong></label>
+                <input type="checkbox" value="livros">Livros
+                <input type="checkbox" value="cinema">Cinema
+                <input type="checkbox" value="internet">Internet
+                <input type="checkbox" value="series">Series
+                <input type="checkbox" value="esportes">Esportes
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="msg"><strong>Por quê você deseja entrar no grupo?</strong></label><br>
+            <textarea name="msg" id="msg" rows="6" width=6em></textarea>
+        </div>
+        <button id="button" type="submit">Enviar</button>
+    </form>
+</body>
+</html>
